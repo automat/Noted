@@ -1,0 +1,138 @@
+body,#title-bar,#editor-view{
+    background: #19191A ;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* TITLE BAR
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#title-bar{
+    border-bottom-color: #242426 ;
+}
+
+#title-bar.blur #title-bar-menu circle,
+#title-bar #title-bar-menu-close.blur circle,
+#title-bar #title-bar-menu-minimize.blur circle,
+#title-bar #title-bar-menu-full.blur circle{
+    stroke: #050505;
+    fill: #0d0d0d !important;
+}
+
+#title-bar-input, #title-bar-word-counter{
+    color: #5F5A60;
+}
+
+#title-bar-input.edited:after{
+    color: #4b464c;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* SCROLLBAR
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+::-webkit-scrollbar-thumb {
+    background-color: #242426;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #303033;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.075);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* EDITOR
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#editor-view ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.195);
+}
+
+#editor-split-handle{
+    background: #1A1A1A;
+}
+
+#editor-split-handle:hover{
+    background: #322b33;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* PREVIEW CONSOLE
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+#preview-console ::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.35);
+}
+
+#preview-console{
+    background: #121212;
+}
+
+#preview-split-handle{
+    background: #18181A;
+}
+
+#preview-split-handle:hover{
+    background: #212124;
+}
+
+.console-divider{
+    background: #171717;
+}
+
+.console-footer{
+    border-top-color: #222224 ;
+    background: #18181A;
+}
+
+.console-btn{
+    border-color: #000;
+}
+
+.console-btn:hover .console-btn-inner{
+    background-color: #181818;
+}
+
+.console-btn-inner{
+    color: #595959;
+    border-color: #222224;
+}
+
+.console-btn:active .console-btn-inner{
+    border: 1px solid #121212;
+    background-color: #121212;
+}
+
+#console-btn-log-extend .console-btn-inner #svg-check,
+#console-btn-auto-compile .console-btn-inner #svg-check{
+    fill: #000;
+}
+
+#console-output-list{
+    color: #878787;
+}
+
+#console-output-list li{
+    border-bottom-color: #0D0F0D  ;
+}
+
+#console-output-list .output-index {
+    color: #2f2f2f;
+}
+
+#console-output-list .output-line-info{
+    color: #2f2f2f;
+}
+
+#console-log-count{
+    color: #2f2f2f;
+}
+
+#console-btn-log-extend:hover .console-btn-inner #svg-check,
+#console-btn-log-extend.check-active .console-btn-inner #svg-check,
+#console-btn-auto-compile:hover .console-btn-inner #svg-check,
+#console-btn-auto-compile.check-active .console-btn-inner #svg-check{
+    fill: #8B8B8B;
+}

@@ -1,0 +1,13 @@
+{
+  "name"    : "Noted",
+  "version" : "0.0.1",
+  "author"  : "Henryk Wollik",
+  "main"    : "./src/App.js",
+  "dependencies" : {
+    "markdown-it" : "5.0.1",
+    "markdown-it-relativelink" : "0.2.0",
+    "coffee-script" : "1.10.0",
+    "gifencoder" : "^1.0.6 ",
+    "d3" : "^3.5.10"
+  }
+}

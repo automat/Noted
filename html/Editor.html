@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html></html>
+<head lang="eng">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="../lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../lib/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/fonts/FiraCode.css">
+  <link rel="stylesheet" type="text/css" href="../resources/style/window-editor.css">
+  <link rel="stylesheet" type="text/css" href="../resources/themes-editor/noted-dark.css">
+  <script type="text/javascript">
+    var editor = new (require('../src/HTMLEditor'))();
+    window.addEventListener('load', function(){
+        editor.load();
+    });
+  </script>
+</head>
+<body>
+  <div id="title-bar"><svg id='title-bar-menu' width="53px" height="13px" viewBox="0 0 53 12" version="1.1"
+                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g transform="translate(-178.000000, -45.000000)">
+                          <g transform="translate(178.000000, 45.000000)">
+                              <g id="title-bar-menu-close">
+                                  <circle id="circle" stroke="#E2463F" stroke-width="0.5" fill="#FF625A" cx="6" cy="6"
+                                          r="6"></circle>
+                                  <g id="menu-close-icon">
+                                      <path d="M3.5,3.5 L8.5,8.5" id="Line" stroke="#3F0401" stroke-linecap="square"></path>
+                                      <path d="M3.5,3.5 L8.5,8.5" id="Line" stroke="#3E0401" stroke-linecap="square"
+                                            transform="translate(6.000000, 6.000000) scale(-1, 1) translate(-6.000000, -6.000000) "></path>
+                                  </g>
+                              </g>
+                              <g id="title-bar-menu-minimize" transform="translate(20.000000, 0.000000)">
+                                  <circle id="circle" stroke="#D69813" stroke-width="0.5" fill="#FFC12F" cx="6" cy="6"
+                                          r="6"></circle>
+                                  <g id="menu-minimize-icon">
+                                      <path d="M2.5,6 L9.5,6" id="Line" stroke="#995700" stroke-linecap="square"></path>
+                                  </g>
+                              </g>
+                              <g id="title-bar-menu-full" transform="translate(40.000000, 0.000000)">
+                                  <circle id="circle" stroke="#20A232" stroke-width="0.5" fill="#29CF42" cx="6" cy="6"
+                                          r="6"></circle>
+                                  <g id="menu-full-icon">
+                                      <path d="M4.5,3 L9,3 L9,7.5 L4.5,3 Z" id="Rectangle-81" fill="#006400"></path>
+                                      <path d="M3,4.5 L7.5,9 L3,9 L3,4.5 Z" id="Rectangle-82" fill="#006400"></path>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+  </div>
+  <div id="view-container">
+    <div id="editor-split-view">
+      <div id="editor-view">
+        <div id="ace-editor"></div>
+      </div>
+      <div id="editor-split-handle"></div>
+      <div id="preview-view">
+        <div id="preview-view-wrapper">
+          <iframe id="preview-view-iframe"></iframe>
+        </div>
+        <div id="preview-console" class="hide">
+          <div id="console-log-resize"></div>
+          <ul id="console-output-list"></ul>
+          <div class="console-footer">
+            <div id="console-log-count"></div>
+            <div id="console-btn-reload" class="console-btn">
+              <div class="console-btn-inner">Reload<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="9px" viewBox="0 0 8 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-7" sketch:type="MSArtboardGroup" transform="translate(-1325.000000, -1020.000000)" fill="#8B8B8B">
+            <g id="Rectangle-162-+-Reload-+-167" sketch:type="MSLayerGroup" transform="translate(1268.000000, 1013.000000)">
+                <g id="Reload-+-167" transform="translate(9.000000, 5.000000)" sketch:type="MSShapeGroup">
+                    <g id="167" transform="translate(48.000000, 2.000000)">
+                        <path d="M6.98358333,1.14374 C6.24133333,0.434113333 5.25191667,0 4.16666667,0 C1.86916667,0 0,1.94393333 0,4.33333333 C0,6.72273333 1.86916667,8.66666667 4.16666667,8.66666667 C5.31358333,8.66666667 6.35358333,8.1822 7.10775,7.39977333 L6.28316667,6.54220667 C5.74025,7.10484667 4.99183333,7.45333333 4.16666667,7.45333333 C2.51241667,7.45333333 1.16666667,6.05375333 1.16666667,4.33333333 C1.16666667,2.61291333 2.51241667,1.21333333 4.16666667,1.21333333 C4.93033333,1.21333333 5.62775,1.51207333 6.15791667,2.00243333 L5.16666667,3.03333333 L6.89275,3.03333333 L8,3.03333333 L8,2.63588 L8,0.0866666667 L6.98358333,1.14374 L6.98358333,1.14374 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+              </div>
+            </div>
+            <div id="console-btn-auto-compile" class="console-btn">
+              <div class="console-btn-inner">auto-compile<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Artboard-7" sketch:type="MSArtboardGroup" transform="translate(-1104.000000, -1022.000000)" fill="#8B8B8B">
+                <g id="Rectangle-162-+-auto-compile-+-Rectangle-166-+-Path" sketch:type="MSLayerGroup" transform="translate(1006.000000, 1013.000000)">
+                    <g id="auto-compile-+-Rectangle-166-+-Path" transform="translate(10.000000, 5.000000)" sketch:type="MSShapeGroup">
+                        <g id="svg-check" transform="translate(88.000000, 4.000000)">
+                            <path d="M6.86298476,0.72347943 C6.86298476,0.72347943 2.73623985,4.8818209 2.73623985,4.89853313 C2.5551472,5.08080085 2.35773402,5.06761386 2.17089655,4.88012357 L0.156289848,2.84005683 C-0.0476515435,2.65308879 -0.0520907287,2.46625132 0.143494549,2.27902216 C0.338818699,2.09218468 0.529964792,2.09218468 0.717324521,2.27902216 L2.45134861,3.98758621 L6.27649006,0.136984724 C6.46332753,-0.0498527479 6.65460419,-0.0455441269 6.85045059,0.149780023 C7.04551361,0.345365301 7.04982223,0.536641958 6.86298476,0.72347943 L6.86298476,0.72347943 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+</svg>
+              </div>
+            </div>
+            <div id="console-btn-log-extend" class="console-btn">
+              <div class="console-btn-inner">extended log<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Artboard-7" sketch:type="MSArtboardGroup" transform="translate(-1104.000000, -1022.000000)" fill="#8B8B8B">
+                <g id="Rectangle-162-+-auto-compile-+-Rectangle-166-+-Path" sketch:type="MSLayerGroup" transform="translate(1006.000000, 1013.000000)">
+                    <g id="auto-compile-+-Rectangle-166-+-Path" transform="translate(10.000000, 5.000000)" sketch:type="MSShapeGroup">
+                        <g id="svg-check" transform="translate(88.000000, 4.000000)">
+                            <path d="M6.86298476,0.72347943 C6.86298476,0.72347943 2.73623985,4.8818209 2.73623985,4.89853313 C2.5551472,5.08080085 2.35773402,5.06761386 2.17089655,4.88012357 L0.156289848,2.84005683 C-0.0476515435,2.65308879 -0.0520907287,2.46625132 0.143494549,2.27902216 C0.338818699,2.09218468 0.529964792,2.09218468 0.717324521,2.27902216 L2.45134861,3.98758621 L6.27649006,0.136984724 C6.46332753,-0.0498527479 6.65460419,-0.0455441269 6.85045059,0.149780023 C7.04551361,0.345365301 7.04982223,0.536641958 6.86298476,0.72347943 L6.86298476,0.72347943 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+</svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    ace.require("ace/ext/language_tools");
+    var ace_editor = ace.edit('ace-editor');
+    ace_editor.setOptions({
+        enableBasicAutocompletion : true,
+        enableLiveAutocompletion : false,
+        enableSnippets : true,
+        selectionStyle : 'text',
+        showPrintMargin : false
+    });
+    
+    ace_editor_updateFromSettings();
+    
+    ace_editor.$blockScrolling = Infinity;
+    ace_editor.setHighlightActiveLine(false);
+    ace_editor.getSession().setMode('ace/mode/markdown');
+  </script>
+</body>

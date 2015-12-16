@@ -1,0 +1,84 @@
+#title-bar{
+    padding: 0 3px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+}
+
+#title-bar {
+    -webkit-app-region: drag;
+}
+
+#title-bar-menu{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+#title-bar-menu-close,
+#title-bar-menu-minimize,
+#title-bar-menu-full{
+    -webkit-app-region: no-drag;
+}
+
+#menu-close-icon,
+#menu-minimize-icon,
+#menu-full-icon{
+    display: none;
+}
+
+#title-bar-menu-close:hover #menu-close-icon,
+#title-bar-menu-minimize:hover #menu-minimize-icon,
+#title-bar-menu-full:hover #menu-full-icon{
+    display: block;
+}
+
+#title-bar-input-wrap{
+    float: left;
+    position: absolute;
+    left: 50%;
+    padding-top: 14px;
+}
+
+#title-bar-input{
+    float: left;
+    position: relative;
+    left: -50%;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    text-align: center;
+    width: auto;
+
+    resize: none;
+    border: none;
+    outline: none;
+
+    overflow: hidden;
+}
+
+#title-bar-input.edited:after{
+    content: " – Edited"
+}
+
+#title-bar-word-counter{
+    position: absolute;
+    float: right;
+    padding-top: 14px;
+    right: 13px;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+#title-bar-word-counter:before{
+    content: "Words "
+}
+
+span:focus{
+    outline: 0;
+}

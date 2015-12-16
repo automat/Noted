@@ -1,0 +1,63 @@
+html, body{
+    height: 100%;
+}
+
+div{
+    -webkit-user-select: none !important;
+}
+
+#editor-split-view {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#editor-split-view #editor-view, #editor-split-view #preview-view{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+#editor-split-view #editor-view{
+    float: left;
+}
+
+#editor-split-view #preview-view{
+    float: right;
+}
+
+
+#editor-view{
+    background: #333;
+}
+
+#preview-view{
+    background: #111;
+}
+
+#editor-split-handle{
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+    z-index: 100;
+}
+
+#editor-split-handle:hover{
+    cursor: col-resize;
+}
+
+.hide{
+    display: none !important;
+}
+
+.view-expand{
+    width: 100% !important;
+}
+
+
+

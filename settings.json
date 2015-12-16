@@ -1,0 +1,22 @@
+{
+    "document": {
+        "last": null,
+        "dir_last": "/Users/automat/Projects"
+    },
+    "editor": {
+        "theme": "noted-dark",
+        "font_family": "FiraCode",
+        "font_size": 13,
+        "line_height": 1.4,
+        "show_gutter": false,
+        "word_wrap": true,
+        "word_wrap_limit": 80,
+        "padding": 50
+    },
+    "markdown": {
+        "use_plugins": false
+    },
+    "preview": {
+        "theme": "noted-github"
+    }
+}

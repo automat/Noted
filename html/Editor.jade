@@ -1,0 +1,40 @@
+doctype
+html
+head(lang="eng")
+    meta(charset="UTF-8")
+    title
+    script(src="../lib/ace/ace.js" type="text/javascript" charset="utf-8")
+    script(src="../lib/ace/ext-language_tools.js" type="text/javascript" charset="utf-8")
+    link(rel="stylesheet" type="text/css" href="../resources/fonts/FiraCode.css")
+    link(rel="stylesheet" type="text/css" href="../resources/style/window-editor.css")
+    link(rel="stylesheet" type="text/css" href="../resources/themes-editor/noted-dark.css")
+    script(type="text/javascript").
+        var editor = new (require('../src/HTMLEditor'))();
+        window.addEventListener('load', function(){
+            editor.load();
+        });
+body
+    include components/title-bar
+    #view-container
+        #editor-split-view
+            #editor-view
+                #ace-editor
+            #editor-split-handle
+            include components/preview-view
+    script(type="text/javascript").
+        ace.require("ace/ext/language_tools");
+        var ace_editor = ace.edit('ace-editor');
+        ace_editor.setOptions({
+            enableBasicAutocompletion : true,
+            enableLiveAutocompletion : false,
+            enableSnippets : true,
+            selectionStyle : 'text',
+            showPrintMargin : false
+        });
+
+        ace_editor_updateFromSettings();
+
+        ace_editor.$blockScrolling = Infinity;
+        ace_editor.setHighlightActiveLine(false);
+        ace_editor.getSession().setMode('ace/mode/markdown');
+

@@ -1,0 +1,54 @@
+@import "../../fonts/FiraCode.css";
+@import "../../fonts/Menlo-Regular.css";
+@import "title-bar.css";
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body{
+    font-family: 'FiraCode';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-animation: fadein 1.15s;
+}
+
+.view-container-expand{
+    top: 0 !important;
+}
+
+#view-container{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    bottom: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 4px solid rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100, 100, 100, 0.4);
+}
+
+.scroll-bar-hide ::-webkit-scrollbar{
+    visibility: hidden;
+}
